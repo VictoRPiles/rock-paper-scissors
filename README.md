@@ -1,5 +1,5 @@
 # piedra-papel-tijera
-Clásico juego de piedra, papel y tijera escrito en Go.
+Juega contra la IA a el clásico juego de piedra, papel y tijera escrito en Go.
 
 <pre>
 TU JUGADA                              MAQUINA
