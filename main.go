@@ -19,7 +19,12 @@ func turnoUsuario() int {
 	fmt.Printf("3) TIJERA\n")
 	fmt.Printf("> ")
 	fmt.Scanln(&turno)
-	// TODO: Validar rango del numero
+
+	if turno < 1 || turno > 3 {
+		fmt.Printf("OPCIÓN INCORRECTA\n")
+		turno = turnoUsuario()
+	}
+
 	return turno
 }
 
