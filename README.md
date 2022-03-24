@@ -1,4 +1,4 @@
-# piedra-papel-tijera
+# Piedra, Papel y Tijera
 Juega contra la IA a el clásico juego de piedra, papel y tijera escrito en Go.
 
 <pre>
