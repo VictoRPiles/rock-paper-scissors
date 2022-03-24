@@ -122,10 +122,8 @@ func dibujar(maquina int, usuario int) {
 	}
 }
 
-/* Imprime el veredicto de la jugada, llana a la función dibujar */
+/* Imprime el veredicto de la jugada */
 func jugar(maquina int, usuario int) {
-
-	dibujar(maquina, usuario)
 
 	if maquina == usuario {
 		fmt.Printf("EMPATE\n")
@@ -158,7 +156,14 @@ func main() {
 	fmt.Printf("===================================\n")
 
 	for strings.EqualFold(seguir, "s") {
-		jugar(turnoMaquina(), turnoUsuario())
+		var maquina int
+		var usuario int
+
+		maquina = turnoMaquina()
+		usuario = turnoUsuario()
+
+		dibujar(maquina, usuario)
+		jugar(maquina, usuario)
 
 		fmt.Printf("SEGUIR JUGANDO? (S / N) > ")
 		fmt.Scanln(&seguir)
