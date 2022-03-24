@@ -149,7 +149,7 @@ func jugar(maquina int, usuario int) {
 }
 
 func main() {
-	var seguir string = "s"
+	var seguir = "s"
 
 	fmt.Printf("===================================\n")
 	fmt.Printf("====  PIEDRA - PAPEL - TIJERA  ====\n")
