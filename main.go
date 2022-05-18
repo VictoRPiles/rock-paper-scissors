@@ -6,6 +6,31 @@ import (
 	"strings"
 )
 
+/* Permite seleccionar el modo de juego */
+func menu() int {
+	var op int
+	/* IMPORTANTE: Cambiar estos valores cuando se añaden o se quitan entradas en el menu */
+	const MinOp = 1
+	const MaxOp = 3
+
+	fmt.Printf("1) Un jugador\n")
+	fmt.Printf("2) Multijugador\n")
+	fmt.Printf("3) Salir\n")
+	fmt.Printf("> ")
+
+	_, err := fmt.Scanln(&op)
+	if err != nil {
+		op = 0
+	}
+
+	if op < MinOp || op > MaxOp {
+		fmt.Printf("ERROR: Opción no válida\n")
+		return menu()
+	}
+
+	return op
+}
+
 /* Genera un número aleatorio entre 1 y 3 */
 func turnoMaquina() int {
 	return rand.Intn(3-1+1) + 1
@@ -153,13 +178,8 @@ func jugar(maquina int, usuario int) {
 	}
 }
 
-func main() {
+func juegoUnJugador() {
 	var seguir = "s"
-
-	fmt.Printf("===================================\n")
-	fmt.Printf("====  PIEDRA - PAPEL - TIJERA  ====\n")
-	fmt.Printf("===================================\n")
-
 	for strings.EqualFold(seguir, "s") {
 		var maquina int
 		var usuario int
@@ -176,4 +196,31 @@ func main() {
 			return
 		}
 	}
+}
+
+func juegoMultijugador(cantidadJugadores int) {
+
+}
+
+func main() {
+
+	fmt.Printf("===================================\n")
+	fmt.Printf("====  PIEDRA - PAPEL - TIJERA  ====\n")
+	fmt.Printf("===================================\n")
+
+	switch menu() {
+	case 1:
+		juegoUnJugador()
+		break
+	case 2:
+		var cantidadJugadores int
+
+		_, err := fmt.Scanln(&cantidadJugadores)
+		if err != nil {
+			return
+		}
+
+		juegoMultijugador(cantidadJugadores)
+	}
+
 }
