@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
-import "math/rand"
-import "strings"
+import (
+	"fmt"
+	"math/rand"
+	"strings"
+)
 
 /* Genera un número aleatorio entre 1 y 3 */
 func turnoMaquina() int {
@@ -18,7 +20,10 @@ func turnoUsuario() int {
 	fmt.Printf("2) PAPEL\n")
 	fmt.Printf("3) TIJERA\n")
 	fmt.Printf("> ")
-	fmt.Scanln(&turno)
+	_, err := fmt.Scanln(&turno)
+	if err != nil {
+		return 0
+	}
 
 	if turno < 1 || turno > 3 {
 		fmt.Printf("OPCIÓN INCORRECTA\n")
@@ -166,6 +171,9 @@ func main() {
 		jugar(maquina, usuario)
 
 		fmt.Printf("SEGUIR JUGANDO? (S / N) > ")
-		fmt.Scanln(&seguir)
+		_, err := fmt.Scanln(&seguir)
+		if err != nil {
+			return
+		}
 	}
 }
