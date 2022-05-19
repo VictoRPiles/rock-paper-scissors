@@ -1,4 +1,4 @@
-module piedra-papel-tijera
+module github.com/VictoRPiles/piedra-papel-tijera
 
 go 1.18
 
