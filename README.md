@@ -1,5 +1,6 @@
 # Piedra, Papel y Tijera
-Juega contra la IA a el clásico juego de piedra, papel y tijera escrito en Go.
+
+Juega contra la IA o con un amigo al clásico juego de piedra, papel y tijera escrito en Go.
 
 <pre>
 TU JUGADA                              MAQUINA
@@ -14,4 +15,6 @@ GANAS
 </pre>
 
 ## Como jugar
-Descarga la versión para tu sistema operativo en la [sección releases](https://github.com/VictoRPiles/piedra-papel-tijera/releases).
+
+Descarga la versión para tu sistema operativo en la
+[sección releases](https://github.com/VictoRPiles/piedra-papel-tijera/releases).
