@@ -1,6 +1,6 @@
-# Piedra, Papel y Tijera
+# rock-paper-scissors
 
-Juega contra la IA o con un amigo al clásico juego de piedra, papel y tijera escrito en Go.
+Joc clàssic de pedra, paper i tisores, amb IA i mode dos jugadors, escrit en Go.
 
 <pre>
 TU JUGADA                              MAQUINA
@@ -14,7 +14,7 @@ TU JUGADA                              MAQUINA
 GANAS
 </pre>
 
-## Como jugar
+## Com jugar
 
-Descarga la versión para tu sistema operativo en la
-[sección releases](https://github.com/VictoRPiles/piedra-papel-tijera/releases).
+Descarrega la versió per al teu sistema operatiu en la
+[secció releases](https://github.com/VictoRPiles/rock-paper-scissors/releases).
